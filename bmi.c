@@ -1,18 +1,31 @@
-<<<<<<< HEAD
 #include <stdio.h>
 
 int main()
 {
     float peso, altura, imc;
-    printf("Ingrese su peso en KG: ");
-    scanf("%f", &peso);
+   
+    do{
+        printf("Ingrese su peso en KG: ");
+        scanf("%f", &peso);
+
+        if(peso <= 0)
+        {
+            printf("El peso debe ser un número positivo. Por favor, intente de nuevo.\n");
+        }
+    } while(peso <= 0);
     
-    printf("Ingrese su altura en metros: ");
-    scanf("%f", &altura);
+    do{
+        printf("Ingrese su altura en metros: ");
+        scanf("%f", &altura);
+
+        if(altura <= 0)
+        {
+            printf("La altura debe ser un número positivo. Por favor, intente de nuevo.\n");
+        }
+    } while(altura <= 0);
     
     imc = peso / (altura * altura);
 
-    
     printf("\nA continuación se detallará una tabla con el índice y condición:\n");
     printf("      Índice      |      Condición   \n");
     printf("------------------|------------------\n");
@@ -40,27 +53,6 @@ int main()
     }
 
     return 0;
-=======
-#include <stdio.h>
-
-int main()
-{
-    float peso, altura;
-    printf("Ingrese su peso en KG: ");
-    scanf("%f", &peso);
-    
-    printf("Ingrese su altura en metros: ");
-    scanf("%f", &altura);
-
-    printf("\nSu índice de masa corporal es de: %.2f\n", peso / (altura * altura));
-    printf("\nA continuación se detallará una tabla con el índice y condición:\n");
-    printf("      Índice      |      Condición   \n");
-    printf("------------------|------------------\n");
-    printf("     < 18.5kg     |      Bajo peso \n");
-    printf(" 18.5kg a 24.9kg  |       Normal \n");
-    printf(" 25.0kg a 29.9kg  |      Sobrepeso \n");
-    printf("     >= 30kg      |      Obesidad \n");
-    
-    return 0;
->>>>>>> dffe738a163037512bea313f498202b81533a1ad
 }
+
+// Link del repositorio: https://github.com/Juaanacostac00/InfoUno/tree/main
